@@ -1,0 +1,11 @@
+@import "../../../assets/styles/variable.module";
+
+.card {
+  font-size: 1.6rem;
+  background-color: $cardColor;
+  display: inline-block;
+  padding: 2rem;
+  color: $fontcolor;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
