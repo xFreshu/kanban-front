@@ -1,0 +1,21 @@
+@import "src/assets/styles/variable.module.scss";
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  border-right: solid 1px $borderColor;
+  background-color: $cardColor;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00d1b2;
+    height: 100px;
+    border-bottom: solid 1px $borderColor;
+  }
+  span {
+    display: inline-block;
+    color: $borderColor;
+    font-weight: 700;
+    margin: 1rem;
+  }
+}
