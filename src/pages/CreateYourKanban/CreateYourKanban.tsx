@@ -56,18 +56,18 @@ const CreateYourKanban = () => {
           />
           {errors.email && <ErrorMessage errorMessage={`Email is required.`} />}
           <FormField
-            label={"Board name"}
-            id={"boardName"}
+            label={"Company name"}
+            id={"companyName"}
             type="text"
-            {...register("boardName", {
+            {...register("companyName", {
               required: true,
               max: 32,
               min: 3,
               maxLength: 100,
             })}
           />
-          {errors.boardName && (
-            <ErrorMessage errorMessage={`Board name is required.`} />
+          {errors.companyName && (
+            <ErrorMessage errorMessage={`Company name is required.`} />
           )}
           <Button type="submit" btnName="Create" />
           <Button

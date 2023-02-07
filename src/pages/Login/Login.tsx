@@ -6,8 +6,11 @@ import FormField from "../../components/molecules/FormField/FormField";
 import ErrorMessage from "../../components/atoms/ErrorMessage/ErrorMessage";
 import Button from "../../components/atoms/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setLogin } from "../../app/features/user/userSlice";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
     register,
@@ -16,6 +19,15 @@ const Login = () => {
   } = useForm();
   const onSubmit = (data: any) => {
     console.log(data);
+    dispatch(
+      setLogin({
+        ...data,
+        boards: [
+          { id: 1, boardName: "Board 1", columns: [] },
+          { id: 2, boardName: "Board 2", columns: [] },
+        ],
+      }),
+    );
     navigate("/dashboard");
   };
   return (
@@ -51,7 +63,7 @@ const Login = () => {
           <Button type="submit" btnName="Login" />
           <Button
             type="button"
-            btnName="Create your Board"
+            btnName="Create your Account"
             className={classes.secondButton}
             onClick={() => navigate("/")}
           />
