@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { UserState } from "./IUser";
+import { UserState } from "./interface/IUser";
 
 const initialState: UserState = {
   firstName: "",
@@ -20,6 +20,7 @@ export const userSlice = createSlice({
       state.email = action.payload.email;
       state.companyName = action.payload.companyName;
       state.boards = action.payload.boards;
+      localStorage.setItem("user", JSON.stringify(state));
     },
   },
 });

@@ -2,11 +2,11 @@
 .container {
   height: 100px;
   border-bottom: solid 1px $borderColor;
-  width: calc(100% - 300px);
   background-color: $cardColor;
   display: flex;
   align-items: center;
+  grid-area: 1 / 2 / 2 / 8;
   span {
-    margin: 0rem auto 0 2rem;
+    margin: 0 auto 0 2rem;
   }
 }
