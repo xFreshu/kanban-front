@@ -13,7 +13,14 @@ const Sidebar = () => {
       <ul>
         {boards.map((board: any) => (
           <li key={board.id}>
-            <NavLink to={`/dashboard/board/${board.id}`}>
+            <NavLink
+              to={`/dashboard/board/${board.id}`}
+              className={({ isActive }) =>
+                isActive
+                  ? `${classes.styledNavLink} ${classes.active}`
+                  : `${classes.styledNavLink}`
+              }
+            >
               {board.boardName}
             </NavLink>
           </li>

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 const HeaderApp = () => {
   const params = useLocation();
-  const name = params.pathname.split("/");
+  const name = params.pathname.split("/dashboard");
   console.log(params);
   return (
     <div className={classes.container}>
