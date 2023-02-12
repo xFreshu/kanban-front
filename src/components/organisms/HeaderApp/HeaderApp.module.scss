@@ -10,3 +10,13 @@
     margin: 0 auto 0 2rem;
   }
 }
+
+.logout {
+  background-color: $cardColor;
+  border: solid 2px $primaryColor;
+  margin: 0 2rem;
+  &:hover {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
+}
