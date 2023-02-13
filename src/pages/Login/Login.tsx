@@ -22,10 +22,7 @@ const Login = () => {
     dispatch(
       setLogin({
         ...data,
-        boards: [
-          { id: 1, boardName: "Board 1", columns: [] },
-          { id: 2, boardName: "Board 2", columns: [] },
-        ],
+        boards: [],
       }),
     );
     navigate("/dashboard");

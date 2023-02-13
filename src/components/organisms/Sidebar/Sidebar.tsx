@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import classes from "./Sidebar.module.scss";
 import { useSelector } from "react-redux";
+import Button from "../../atoms/Button/Button";
 
 const Sidebar = () => {
   const boards = useSelector((state: any) => state.user.boards);
@@ -28,6 +29,10 @@ const Sidebar = () => {
             </NavLink>
           </li>
         ))}
+        <Button
+          btnName="New table"
+          className={`${classes.styledNavLink} ${classes.createTable}`}
+        />
       </ul>
     </div>
   );

@@ -1,7 +1,12 @@
 import React from "react";
 import classes from "./Board.module.scss";
 
-const Board = () => {
+type BoardProps = {
+  isOpen: boolean;
+};
+
+const Board = ({ isOpen }: BoardProps) => {
+  console.log(isOpen);
   return (
     <div className={classes.container}>
       <div className={classes.column}>
